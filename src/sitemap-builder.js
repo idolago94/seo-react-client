@@ -36,7 +36,8 @@ async function generateSitemap() {
             // '/photos/:id': photos,
             // '/todos/:id': todos,
             // '/albums/:id': albums
-            '/sport/:sportId': sports.map(s => ({ sportId: s.sporrtId })),
+
+            '/sport/:sportId': sports.map(s => ({ sportId: s.sportId })),
             '/market/:marketId': markets.map(m => ({ marketId: m.mId }))
         };
 

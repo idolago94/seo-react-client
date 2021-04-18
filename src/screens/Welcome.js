@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom'
 import { Helmet } from "react-helmet";
 import sports from '../Sports.json';
 export default class Welcome extends Component {
-    items = [
-        { title: 'כל הארועים', route: '/markets' },
-        ...sports.map(s => ({ title: s.title, route: '/sport/' + s.sportId }))
-    ]
     render() {
+        let items = [
+            { title: 'כל הארועים', route: '/markets' },
+            ...sports.map(s => ({ title: s.title, route: '/sport/' + s.sportId }))
+        ]
         return <div>
             <Helmet>
                 <meta charSet="utf-8" />
