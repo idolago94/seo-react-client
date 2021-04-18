@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Helmet } from "react-helmet";
 
 export default class PostDetails extends Component {
     constructor(props) {
@@ -15,6 +16,11 @@ export default class PostDetails extends Component {
 
     render() {
         return <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>{this.state.post.title}</title>
+                <meta name="description" content={this.state.post.body} />
+            </Helmet>
             <h1>{this.state.post.title}</h1>
             <ul>
                 {Object.keys(this.state.post).map(k => <li key={k}>{k}: {this.state.post[k]}</li>)}

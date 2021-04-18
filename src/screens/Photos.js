@@ -23,8 +23,8 @@ export default class Photos extends Component {
         return <div>
             <Helmet>
                 <meta charSet="utf-8" />
-                <title>Photoa seo-react</title>
-                <link rel="canonical" href='https://seo-react-app.herokuapp.com/photos' />
+                <title>Photos List</title>
+                <meta name="description" content="list of all photos" />
             </Helmet>
             <h1>{'Photos'}</h1>
             <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>

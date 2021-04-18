@@ -11,10 +11,16 @@ import TodoList from '../TodoList';
 import TodoDetails from '../TodoDetails'
 import AlbumList from '../AlbumList';
 import AlbumDetails from '../AlbumDetails';
+import MarketsList from '../MarketsList';
+import SportMarkets from '../SportMarkets'
+import MarketDetails from '../MarketDetails';
 
 export default (
     <Switch>
-        <Route path="/posts" exact component={PostList} />
+        <Route path='/markets' exact component={MarketsList} />
+        <Route path='/sport/:sportId' exact component={SportMarkets} />
+        <Route path='/market/:marketId' exact component={MarketDetails} />
+        {/* <Route path="/posts" exact component={PostList} />
         <Route path='/posts/:id' component={PostDetails} />
         <Route path="/users" exact component={UserList} />
         <Route path="/users/:id" component={UserDetails} />
@@ -23,7 +29,7 @@ export default (
         <Route path="/todos" exact component={TodoList} />
         <Route path="/todos/:id" component={TodoDetails} />
         <Route path="/albums" exact component={AlbumList} />
-        <Route path="/albums/:id" component={AlbumDetails} />
+        <Route path="/albums/:id" component={AlbumDetails} /> */}
         <Route path="/" exact component={Welcome} />
         <Route
             render={({ staticContext }) => {
