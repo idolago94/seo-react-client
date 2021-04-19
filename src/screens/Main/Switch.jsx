@@ -14,12 +14,21 @@ import AlbumDetails from '../AlbumDetails';
 import MarketsList from '../MarketsList';
 import SportMarkets from '../SportMarkets'
 import MarketDetails from '../MarketDetails';
+import Results from '../Results';
+import Event from '../Event';
+import Team from '../Team';
 
 export default (
     <Switch>
-        <Route path='/markets' exact component={MarketsList} />
+        <Route path='/results/:sportName/:date' component={Results} />
+        <Route path='/results/:sportName' component={Results} />
+        <Route path='/event/:eventId' component={Event} />
+        <Route path='/team/:teamName' component={Team} />
+
+        {/* <Route path='/markets' exact component={MarketsList} />
         <Route path='/sport/:sportId' exact component={SportMarkets} />
-        <Route path='/market/:marketId' exact component={MarketDetails} />
+        <Route path='/market/:marketId' exact component={MarketDetails} /> */}
+        
         {/* <Route path="/posts" exact component={PostList} />
         <Route path='/posts/:id' component={PostDetails} />
         <Route path="/users" exact component={UserList} />

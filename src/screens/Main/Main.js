@@ -13,6 +13,8 @@ import AlbumList from '../AlbumList';
 import AlbumDetails from '../AlbumDetails';
 import Switch from './Switch';
 import sports from '../../Sports.json'
+import SportPicker from '../SportPicker';
+import DatePicker from '../DatePicker';
 export default class Main extends Component {
     items = [
         { title: 'עמוד הבית', route: '/' },
@@ -23,12 +25,12 @@ export default class Main extends Component {
         return <div>
             <BrowserRouter>
                 {/* <Link to='/'>Home</Link> */}
-                <ul style={{ display: 'flex', flexDirection: 'row-reverse' }}>
-                {this.items.map((item, i) => (
+                {/* <ul style={{ display: 'flex', flexDirection: 'row-reverse' }}> */}
+                {/* {this.items.map((item, i) => (
                     <Link style={{ padding: 10, fontSize: 20, color: 'white', textDecoration: 'none' }} to={item.route}>
                         <li style={{ listStyle: 'none' }}>{item.title}</li>
                     </Link>
-                ))}
+                ))} */}
 
                 {/* <Link to='/posts'>
                     <li>Posts</li>
@@ -48,8 +50,14 @@ export default class Main extends Component {
                 <Link to='/about'>
                     <li>About</li>
                 </Link> */}
-            </ul>
-                {Switch}
+                {/* </ul> */}
+                <div style={{display: 'flex', flexDirection: 'row'}}>
+                    <DatePicker />
+                    <div style={{flexGrow: 1}}>
+                        {Switch}
+                    </div>
+                    <SportPicker />
+                </div>
             </BrowserRouter>
         </div>
     }
