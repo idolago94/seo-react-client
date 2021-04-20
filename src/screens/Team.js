@@ -26,11 +26,11 @@ const Team = props => {
                                         <p>קבוצה ב: {res.teamB}</p>
                                     </div>
                                     <div style={{ flexGrow: 1 }}>
-                                        <p>ענף: {sport.title}</p>
+                                        <p>ענף: {sport?.title}</p>
                                         <p>תאריך: {res.date.replace(/\-/g, '.')}</p>
                                     </div>
                                 </div>
-                                <img width={40} height={40} src={sport.sportImage} />
+                                <img width={40} height={40} src={sport?.sportImage} />
                             </div>
                         </Link>
                     )

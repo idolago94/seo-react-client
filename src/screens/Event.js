@@ -13,9 +13,9 @@ const Event = props => {
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>{event.teamA} - {event.teamB} {event.date.replace(/\-/g, '.')}</title>
-                <meta name="description" content={`תוצאת משחק ${sport.title} - ${event.teamA} נגד ${event.teamB} בתאריך  ${event.date.replace(/\-/g, '.')}`} />
+                <meta name="description" content={`תוצאת משחק ${sport?.title} - ${event.teamA} נגד ${event.teamB} בתאריך  ${event.date.replace(/\-/g, '.')}`} />
             </Helmet>
-            <h1>תוצאת משחק {sport.title} - {event.teamA} נגד {event.teamB} בתאריך  {event.date.replace(/\-/g, '.')}</h1>
+            <h1>תוצאת משחק {sport?.title} - {event.teamA} נגד {event.teamB} בתאריך  {event.date.replace(/\-/g, '.')}</h1>
             <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', alignItems: 'center', fontSize: 40, padding: 20 }}>
                 <div style={{ fontWeight: event.scoreA < event.scoreB ? 'bold' : 'normal' }}>
                     <p>{event.scoreB}</p>
@@ -35,7 +35,7 @@ const Event = props => {
                     <Link to={'/team/' + event.teamB}>תוצאות משחקים של {event.teamB}</Link>
                 </div>
                 <div style={{ padding: 5, backgroundColor: 'white', margin: 10, borderRadius: 3 }}>
-                    <Link to={'/results/' + sport.title}>תוצאות משחקים נוספים בענף {sport.title}</Link>
+                    <Link to={'/results/' + sport?.title}>תוצאות משחקים נוספים בענף {sport?.title}</Link>
                 </div>
                 <div style={{ padding: 5, backgroundColor: 'white', margin: 10, borderRadius: 3 }}>
                     <Link to={'/results/all/' + event.date}>תוצאות משחקים נוספים בתאריך {event.date.replace(/\-/g, '.')}</Link>
